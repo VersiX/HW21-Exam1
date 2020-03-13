@@ -4,7 +4,7 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css?family=Aleo|Josefin+Sans:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Aleo|Josefin+Sans:300,400,700&display=swap");
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -4220,15 +4220,20 @@ header {
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
+  margin-top: 263px;
+  margin-bottom: 0;
+  letter-spacing: 2px;
 }
 
 .header__subtitle {
   font-size: 22px;
   font-family: "Josefin Sans", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   color: white;
-  line-height: 1.182;
   text-align: center;
+  margin-top: 0;
+  margin-bottom: 47px;
+  letter-spacing: 5.7px;
 }
 
 .header-search {
@@ -4243,6 +4248,7 @@ header {
       -ms-flex-align: center;
           align-items: center;
   width: 650px;
+  height: 60px;
   max-width: 95%;
 }
 
@@ -4259,7 +4265,9 @@ header {
 }
 
 .header-search-button {
-  height: 56px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
   width: 146px;
   background-color: #5474fd;
   border: solid 2px white;
@@ -4276,7 +4284,7 @@ header {
 
 .header-search-button__text {
   font-size: 14px;
-  font-family: "Aleo", serif;
+  font-family: "Josefin Sans", sans-serif;
   text-transform: uppercase;
   line-height: 1.857;
 }
@@ -4296,10 +4304,26 @@ header {
       -ms-flex-align: center;
           align-items: center;
   text-decoration: none;
+  margin-top: 120px;
+  margin-bottom: 133px;
+}
+
+.header-scroll__text {
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-family: "Josefin Sans", sans-serif;
+  letter-spacing: 2px;
 }
 
 nav {
   background-color: #5474fd;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .nav__title {
@@ -4307,6 +4331,7 @@ nav {
   font-family: "Josefin Sans", sans-serif;
   font-weight: bold;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .nav-menu {
@@ -4314,6 +4339,16 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0;
+}
+
+.nav-menu-toggle {
+  display: none;
+}
+
+.nav-menu-toggle-icon {
+  height: 48px;
+  width: 48px;
 }
 
 .nav-menu-item {
@@ -4323,6 +4358,7 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-left: 41px;
 }
 
 .nav-menu-item__link {
@@ -4369,24 +4405,54 @@ nav {
   background-image: url("img/Why_choose_us_bg.png");
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 120px 0;
 }
 
 .choose-article__title {
   font-size: 36px;
   font-family: "Aleo", serif;
   color: white;
+  letter-spacing: -1px;
+  margin-top: 80px;
+  margin-bottom: 50px;
 }
 
 .img {
   width: 100%;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .header-search-button {
     width: 56px;
   }
   .header-search-button__text {
     display: none;
+  }
+  nav {
+    height: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .nav-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .nav-menu-toggle {
+    display: block;
+  }
+  .nav-menu-item {
+    margin: 0;
+  }
+  .nav-menu-item__link {
+    padding: 15px;
   }
 }
 /*# sourceMappingURL=style.css.map */
