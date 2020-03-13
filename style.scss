@@ -1,5 +1,169 @@
 @import "style/bootstrap_scss/bootstrap-grid.scss";
 
-@import "style/fonts.scss"
+@import url('https://fonts.googleapis.com/css?family=Aleo|Josefin+Sans:400,700&display=swap');
+
+$primary-font: 'Josefin Sans', sans-serif;
+$secondary-font: 'Aleo', serif;
+$text-color: rgb(255, 255, 255);
+
+*{
+    color: $text-color;
+}
+
+header {
+    background-image: url("img/header_bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header {
+
+    &__title {
+
+        font-size: 48px;
+        font-family: $primary-font;
+        color: $text-color;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+
+    }
+
+    &__subtitle {
+        font-size: 22px;
+        font-family: $primary-font;
+        font-weight: 400;
+        color: $text-color;
+        line-height: 1.182;
+        text-align: center;
+
+    }
+
+    &-search {
+        background-color: white;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 650px;
+        max-width: 95%;
 
 
+
+        &__input {
+            flex-grow: 1;
+            border: none;
+            text-align: center;
+            color: rgb(153, 153, 153);
+            line-height: 1.857;
+            font-size: 14px;
+            vertical-align: middle;
+        }
+
+        &-button {
+            height: 56px;
+            width: 146px;
+            background-color: rgb(84, 116, 253);
+            border: solid 2px white;
+            vertical-align: middle;
+
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+
+            &__text {
+                font-size: 14px;
+                font-family: $secondary-font;
+                text-transform: uppercase;
+                line-height: 1.857;
+            }
+        }
+    }
+
+
+    &-scroll {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+
+    }
+}
+
+nav {
+    background-color: rgb(84, 116, 253);
+}
+
+.nav {
+
+    &__title {
+        font-size: 24px;
+        font-family: $primary-font;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    &-menu {
+        list-style: none;
+        display: flex;
+        
+        &-item {
+            display: flex;
+            align-items: center;
+
+            &__link {
+                display: block;
+                text-decoration: none;
+                font-size: 14px;
+                font-family: $secondary-font;
+                text-transform: uppercase;
+                line-height: 1.857;
+            }
+        }
+    }
+
+}
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 767px) {
+
+    .header {
+        &-search {
+            &-button {
+
+                // Hide text in search button in small screens
+                width: 56px;
+                &__text {
+                    display: none;
+                }
+            }
+        }
+    }
+}
